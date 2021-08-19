@@ -47,7 +47,7 @@ app.route('/upload').post((req, res, next) => {
             ]).output(uploadPath+'/output.m3u8').on('end', () => {
                 res.writeHead(200, {'Content-Type': 'text/html'});
 
-                res.write(`<a href="/view?id=${filename}">동영상보기 </a>`);
+                res.write(`<a href="/view?id=${filename}">------------ click here ------- </a>`);
                 return res.end();
             }).run();
         });
